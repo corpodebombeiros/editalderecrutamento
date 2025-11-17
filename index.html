@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Corpo de Bombeiros - Edital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonte Google (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-main: #050507;
+      --bg-dark: #0b0c10;
+      --bg-card: #111218;
+      --red: #e53935;
+      --red-soft: #ff5252;
+      --white: #f5f5f5;
+      --text-muted: #a6a6a6;
+      --border-soft: #262626;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1c1c1c 0, #050507 45%);
+      color: var(--white);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* BANNER PRINCIPAL */
+    header {
+      position: relative;
+      width: 100%;
+      max-height: 380px;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .hero-banner-img {
+      width: 100%;
+      height: 100%;
+      max-height: 380px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.55) contrast(1.1);
+    }
+
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.65)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+
+    .hero-banner-content {
+      max-width: 1120px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .hero-logo {
+      max-height: 200px;
+      width: auto;
+      filter: drop-shadow(0 0 18px rgba(0,0,0,0.9));
+    }
+
+    .hero-banner-text {
+      text-align: right;
+      font-size: 0.9rem;
+    }
+
+    .hero-banner-text .tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--red-soft);
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-banner-text h1 {
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero-banner-text p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* SEÇÕES GERAIS */
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    section {
+      padding: 4rem 0 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--red-soft);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      max-width: 680px;
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #ffb4b4;
+      background: rgba(229,57,53,0.12);
+      border-radius: 999px;
+      padding: 0.3rem 0.9rem;
+      border: 1px solid rgba(229,57,53,0.4);
+      margin-bottom: 1.2rem;
+    }
+
+    /* HERO (CONTEÚDO INICIAL) */
+    #inicio {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.6fr);
+      gap: 2.6rem;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: clamp(2.1rem, 4vw, 2.7rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      color: var(--red-soft);
+    }
+
+    .hero-text {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .hero-pill {
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.09);
+      padding: 0.45rem 0.8rem;
+      background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(229,57,53,0.06));
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-pill span.icon {
+      font-size: 1rem;
+    }
+
+    .hero-callout {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .hero-callout strong {
+      color: var(--white);
+    }
+
+    .hero-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top, rgba(229,57,53,0.5), rgba(6,6,6,0.9));
+      box-shadow: 0 0 25px rgba(229,57,53,0.8);
+      font-size: 1.7rem;
+    }
+
+    .hero-right {
+      position: relative;
+      padding: 1.4rem;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, #1b1b1f, #050507);
+      border-radius: 1.2rem;
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 1.4rem 1.4rem 1.6rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 18px 45px rgba(0,0,0,0.75),
+        0 0 28px rgba(229,57,53,0.35);
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at 10% -10%, rgba(229,57,53,0.35), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-chip {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #ffd2d2;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .hero-chip-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px #22c55e;
+    }
+
+    .hero-card-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-card-sub {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #e5e5e5;
+      margin-bottom: 1rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.55rem;
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      color: #f0f0f0;
+    }
+
+    .hero-dot {
+      margin-top: 0.25rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--red-soft);
+    }
+
+    .hero-footer {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: #eeeeee;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-footer span {
+      opacity: 0.8;
+    }
+
+    .hero-ribbon {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.45);
+      border: 1px solid rgba(255,255,255,0.14);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+    }
+
+    /* REGRAS */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .rules-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    .rules-list li {
+      padding: 0.7rem 0.9rem;
+      border-radius: 0.9rem;
+      background: rgba(17,18,24,0.9);
+      border: 1px solid var(--border-soft);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+    }
+
+    .rules-badge {
+      width: 20px;
+      height: 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(229,57,53,0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .rules-highlight {
+      background: linear-gradient(135deg, rgba(229,57,53,0.12), rgba(0,0,0,0.75));
+      border-radius: 1.1rem;
+      border: 1px solid rgba(229,57,53,0.5);
+      padding: 1.1rem 1.2rem 1.2rem;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      box-shadow: 0 18px 55px rgba(0,0,0,0.7);
+    }
+
+    .rules-highlight-title {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: #ffb4b4;
+    }
+
+    .rules-highlight ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      color: #ffecec;
+    }
+
+    .rules-tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* HIERARQUIA */
+    .hierarchy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .hierarchy-card {
+      background: rgba(11,12,16,0.95);
+      border-radius: 1rem;
+      border: 1px solid var(--border-soft);
+      padding: 1rem 1rem 1.1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hierarchy-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(229,57,53,0.18), transparent 60%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hierarchy-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.6rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hierarchy-rank {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hierarchy-stars {
+      color: #ffdd55;
+      font-size: 0.95rem;
+    }
+
+    .hierarchy-roles {
+      font-size: 0.86rem;
+      color: #f3f3f3;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hierarchy-desc {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* CURSOS */
+    .courses-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.4fr);
+      gap: 1.8rem;
+      align-items: flex-start;
+    }
+
+    .course-block {
+      background: rgba(11,12,16,0.96);
+      border-radius: 1rem;
+      border: 1px solid var(--border-soft);
+      padding: 1.1rem 1.2rem 1.3rem;
+    }
+
+    .course-block-title {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .course-block-sub {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .course-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    .course-item {
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dashed rgba(255,255,255,0.09);
+    }
+
+    .course-item:last-child {
+      border-bottom: none;
+    }
+
+    .course-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+
+    .course-title span.icon {
+      font-size: 1.1rem;
+    }
+
+    .course-req {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .courses-notes {
+      margin-top: 1.2rem;
+      padding: 0.85rem 0.9rem;
+      border-radius: 0.85rem;
+      border: 1px dashed rgba(229,57,53,0.6);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    /* OBS */
+    .obs-box {
+      background: linear-gradient(135deg, rgba(229,57,53,0.1), rgba(5,5,7,0.96));
+      border-radius: 1rem;
+      border: 1px solid rgba(229,57,53,0.35);
+      padding: 1.2rem 1.3rem 1.4rem;
+      font-size: 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.75);
+    }
+
+    .obs-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 1.4rem 1.5rem 2rem;
+      background: #040406;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner strong {
+      color: var(--white);
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      #inicio {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .rules-grid,
+      .courses-wrapper {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .hero-banner-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-banner-text {
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-logo {
+        max-height: 90px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BANNER PRINCIPAL -->
+  <header>
+    <!-- DICA: se a imagem não aparecer, troque por um link direto tipo https://i.imgur.com/XXXXX.jpg -->
+    <img
+      src="https://imgur.com/1bqtX3c.png"
+      alt="Banner Corpo de Bombeiros"
+      class="hero-banner-img"
+    >
+    <div class="hero-banner-overlay">
+      <div class="hero-banner-content">
+        <img
+          src="https://imgur.com/4pPUIW9.png"
+          alt="Logo Corpo de Bombeiros"
+          class="hero-logo"
+        >
+        <div class="hero-banner-text">
+          <div class="tagline">Edital Oficial · Corpo de Bombeiros</div>
+          <h1>Recrutamento &amp; Regulamento Interno</h1>
+          <p>
+            Brasil RP · Compromisso com a disciplina, a hierarquia e a proteção da cidade.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO / BEM-VINDOS -->
+    <section id="inicio">
+      <div class="hero-left">
+        <div class="tag">
+          🚒 Edital Oficial · Corpo de Bombeiros Brasil
+        </div>
+        <h2 class="hero-title">
+          Bem-vindos à <span>linha de frente</span> da cidade. 🚒🔥
+        </h2>
+        <p class="hero-text">
+          Recrutas, é uma honra receber cada um de vocês. A partir de hoje, vocês iniciam uma jornada que vai
+          muito além de um uniforme ou uma patente. Vocês passam a fazer parte de uma tropa que carrega
+          responsabilidade, disciplina e propósito:
+          <strong>salvar vidas e proteger nossa cidade.</strong>
+        </p>
+
+        <div class="hero-grid">
+          <div class="hero-pill">
+            <span class="icon">🫡</span>
+            <span>Disciplina &amp; Hierarquia</span>
+          </div>
+          <div class="hero-pill">
+            <span class="icon">🔥</span>
+            <span>Atuação em Situações Críticas</span>
+          </div>
+          <div class="hero-pill">
+            <span class="icon">🤝</span>
+            <span>Serviço à Comunidade</span>
+          </div>
+        </div>
+
+        <p class="hero-text">
+          Ser Bombeiro é agir com coragem diante do inesperado. É ter compromisso com o próximo, respeito
+          pela hierarquia e orgulho em servir. Aqui, cada plantão é uma oportunidade de aprendizado e cada
+          atendimento, uma chance real de fazer a diferença.
+        </p>
+
+        <div class="hero-callout">
+          <div class="hero-badge">👨‍🚒</div>
+          <div>
+            <strong>Nossa corporação é uma família.</strong><br>
+            Vocês terão apoio, treinamentos e disciplina para evoluir, crescer e honrar a nossa farda.
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="hero-card-top">
+            <div>
+              <div class="hero-chip">
+                <span class="hero-chip-dot"></span>
+                Núcleo de Formação de Recrutas
+              </div>
+              <h3 class="hero-card-title">Missão da Corporação</h3>
+              <div class="hero-card-sub">Objetivos Inegociáveis</div>
+            </div>
+          </div>
+
+          <ul class="hero-list">
+            <li>
+              <span class="hero-dot"></span>
+              <span>✅ Salvar vidas.</span>
+            </li>
+            <li>
+              <span class="hero-dot"></span>
+              <span>✅ Proteger os cidadãos.</span>
+            </li>
+            <li>
+              <span class="hero-dot"></span>
+              <span>✅ Servir com honra, excelência e humanidade.</span>
+            </li>
+          </ul>
+
+          <div class="hero-footer">
+            <span>Cada atendimento é uma oportunidade real de fazer a diferença.</span>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REGRAS GERAIS -->
+    <section id="regras">
+      <div class="section-label">Regulamento</div>
+      <h2 class="section-title">🚨 Regras Gerais dos Bombeiros 🚨</h2>
+      <p class="section-subtitle">
+        As normas a seguir garantem a ordem, a disciplina e a qualidade do serviço prestado pela corporação.
+        Todo bombeiro deve conhecê-las e cumpri-las integralmente.
+      </p>
+
+      <div class="rules-grid">
+        <ul class="rules-list">
+          <li>
+            <span class="rules-badge">01</span>
+            <span>O uso do fardamento é obrigatório conforme sua patente.</span>
+          </li>
+          <li>
+            <span class="rules-badge">02</span>
+            <span>Proibida a associação criminosa, seja com facções ou em ações individuais para benefício próprio ou de terceiros.</span>
+          </li>
+          <li>
+            <span class="rules-badge">03</span>
+            <span>Proibido atirar contra qualquer pessoa, salvo em legítima defesa quando a vida dos oficiais estiver em risco (para isso, utilizem o taser).</span>
+          </li>
+          <li>
+            <span class="rules-badge">04</span>
+            <span>Proibido matar qualquer pessoa sem motivo (RDM).</span>
+          </li>
+          <li>
+            <span class="rules-badge">05</span>
+            <span>Proibido utilizar moto e helicóptero sem possuir o curso de MOB e GRPAE, salvo em casos específicos autorizados pelos comandos.</span>
+          </li>
+          <li>
+            <span class="rules-badge">06</span>
+            <span>Proibido uso de veículos particulares em serviço, exceto para retorno ao batalhão quando o veículo oficial for perdido.</span>
+          </li>
+          <li>
+            <span class="rules-badge">07</span>
+            <span>Proibida a reanimação durante ações (organizadas/blipadas ou de rua).</span>
+          </li>
+          <li>
+            <span class="rules-badge">08</span>
+            <span>Em caso de morte em serviço, utilize o canal de chamado: pelo F8 digite "call bombeiro" e, na tela, insira "QRR".</span>
+          </li>
+          <li>
+            <span class="rules-badge">09</span>
+            <span>É fundamental atender prontamente às demandas dos comandos durante o horário de serviço. Na ausência de ordens, prossiga com suas atividades habituais.</span>
+          </li>
+          <li>
+            <span class="rules-badge">10</span>
+            <span>Qualquer violação cometida por outro bombeiro deve ser reportada aos comandos com evidências (clipe de prova).</span>
+          </li>
+          <li>
+            <span class="rules-badge">11</span>
+            <span>Denunciantes que estiverem cometendo infração durante a gravação da prova também estarão sujeitos à punição.</span>
+          </li>
+          <li>
+            <span class="rules-badge">12</span>
+            <span>É obrigatório cumprir as ordens e instruções dos superiores hierárquicos dentro da corporação.</span>
+          </li>
+          <li>
+            <span class="rules-badge">13</span>
+            <span>Para upamentos de cargos e promoções, é fundamental participar de treinamentos e capacitações oferecidas pela corporação.</span>
+          </li>
+          <li>
+            <span class="rules-badge">14</span>
+            <span>É obrigatório entrar nas calls do Discord da função antes de qualquer atividade, bem como modular e manter-se atento à rádio.</span>
+          </li>
+          <li>
+            <span class="rules-badge">15</span>
+            <span>Proibido patrulhamento com mais de 2 pessoas.</span>
+          </li>
+          <li>
+            <span class="rules-badge">16</span>
+            <span>Proibida a privatização de serviços dos bombeiros ou prestação de serviço para facções/organizações, salvo solicitações específicas da direção da cidade ao comando.</span>
+          </li>
+          <li>
+            <span class="rules-badge">17</span>
+            <span>É permitido levar veículos à mecânica para aumentar desempenho, porém proibidas personalizações estéticas (exceto para comandos).</span>
+          </li>
+          <li>
+            <span class="rules-badge">18</span>
+            <span>O comando “H” (pegar pelo braço) deve ser usado apenas para retirar o paciente do meio da rua para atendimento. Uso indevido configura abuso de comando.</span>
+          </li>
+          <li>
+            <span class="rules-badge">19</span>
+            <span>Levar no mínimo 10 bandagens em patrulhamento para venda, sempre mantendo o valor de 30 mil por unidade.</span>
+          </li>
+          <li>
+            <span class="rules-badge">20</span>
+            <span>Proibido dar carona na viatura. Caso faça, será por sua conta e risco.</span>
+          </li>
+          <li>
+            <span class="rules-badge">21</span>
+            <span>Proibido salvar no HP e ao redor.</span>
+          </li>
+          <li>
+            <span class="rules-badge">22</span>
+            <span>Proibido utilizar modificador de voz.</span>
+          </li>
+        </ul>
+
+        <div class="rules-highlight">
+          <div class="rules-highlight-title">Compromisso com a farda</div>
+          <ul>
+            <li>📌 Cada regra existe para proteger o bombeiro, o cidadão e a imagem da corporação.</li>
+            <li>📌 O descumprimento pode resultar em advertências, punições e até desligamento.</li>
+            <li>📌 Dúvidas devem ser sempre alinhadas com a chefia e comandos.</li>
+          </ul>
+          <p class="rules-tagline">
+            Honre o uniforme que você veste. Ele representa a confiança de toda uma cidade.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIERARQUIA -->
+    <section id="hierarquia">
+      <div class="section-label">Estrutura</div>
+      <h2 class="section-title">Hierarquia e Responsabilidades 🫡</h2>
+      <p class="section-subtitle">
+        A hierarquia organiza a corporação, define responsabilidades e garante que cada bombeiro saiba seu
+        papel dentro da tropa. A cada escalão, aumentam as responsabilidades e as expectativas de liderança.
+      </p>
+
+      <div class="hierarchy-grid">
+        <div class="hierarchy-card">
+          <div class="hierarchy-header">
+            <div class="hierarchy-rank">Escalão 1</div>
+            <div class="hierarchy-stars">⭐️</div>
+          </div>
+          <div class="hierarchy-roles">SOLDADO ⏩ CABO ⏩ SARGENTO</div>
+          <p class="hierarchy-desc">
+            Fase de aprendizado e execução. São a linha de frente nas operações, responsáveis por cumprir
+            ordens, desenvolver habilidades e consolidar a base da carreira.
+          </p>
+        </div>
+
+        <div class="hierarchy-card">
+          <div class="hierarchy-header">
+            <div class="hierarchy-rank">Escalão 2</div>
+            <div class="hierarchy-stars">⭐️⭐️</div>
+          </div>
+          <div class="hierarchy-roles">SUBTENENTE ⏩ TENENTE ⏩ CAPITÃO</div>
+          <p class="hierarchy-desc">
+            Início da liderança direta. Auxiliam em treinamentos, dão suporte aos comandos e orientam novos
+            bombeiros no dia a dia de serviço.
+          </p>
+        </div>
+
+        <div class="hierarchy-card">
+          <div class="hierarchy-header">
+            <div class="hierarchy-rank">Escalão 3</div>
+            <div class="hierarchy-stars">⭐️⭐️⭐️</div>
+          </div>
+          <div class="hierarchy-roles">MAJOR (RECRUTADOR)</div>
+          <p class="hierarchy-desc">
+            Atua no recrutamento e é referência tática e operacional. Coordena equipes em campo e garante
+            a qualidade técnica dos novos bombeiros.
+          </p>
+        </div>
+
+        <div class="hierarchy-card">
+          <div class="hierarchy-header">
+            <div class="hierarchy-rank">Escalão 4</div>
+            <div class="hierarchy-stars">⭐️⭐️⭐️⭐️</div>
+          </div>
+          <div class="hierarchy-roles">TENENTE CORONEL ⏩ CORONEL</div>
+          <p class="hierarchy-desc">
+            Liderança estratégica e suporte direto ao comando geral. Responsáveis por decisões de alto nível
+            e coordenação de operações de grande escala.
+          </p>
+        </div>
+
+        <div class="hierarchy-card">
+          <div class="hierarchy-header">
+            <div class="hierarchy-rank">Escalão 5</div>
+            <div class="hierarchy-stars">⭐️⭐️⭐️⭐️⭐️</div>
+          </div>
+          <div class="hierarchy-roles">SUB COMANDO ⏩ COMANDO GERAL</div>
+          <p class="hierarchy-desc">
+            Responsáveis máximos pela corporação. São exemplos de disciplina, liderança e organização.
+            Tomam decisões estratégicas e definem os rumos do batalhão.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURSOS, REQUISITOS E UPAMENTOS -->
+    <section id="cursos">
+      <div class="section-label">Formação</div>
+      <h2 class="section-title">Cursos, Requisitos e Upamentos 🏅</h2>
+      <p class="section-subtitle">
+        Os cursos a seguir têm como objetivo preparar o bombeiro para funções específicas, aumentar o nível
+        de especialização e habilitar upamentos de cargo, conforme desempenho e disponibilidade.
+      </p>
+
+      <div class="courses-wrapper">
+
+        <!-- Cursos de especialização (upamento) -->
+        <div class="course-block">
+          <div class="course-block-title">Cursos de Especialização</div>
+          <div class="course-block-sub">Válidos para upamento de cargo</div>
+
+          <ul class="course-list">
+            <li class="course-item">
+              <div class="course-title">
+                <span class="icon">⛑️</span>
+                <span>BCM - Básico, Conduta e Modulação (Turma)</span>
+              </div>
+              <div class="course-req">
+                *Sem requisitos mínimos.
+              </div>
+            </li>
+
+            <li class="course-item">
+              <div class="course-title">
+                <span class="icon">💪</span>
+                <span>TAF - Teste de Aptidão Física e Comportamental (Turma)</span>
+              </div>
+              <div class="course-req">
+                *Sem requisitos mínimos.
+              </div>
+            </li>
+
+            <li class="course-item">
+              <div class="course-title">
+                <span class="icon">🏍️</span>
+                <span>MOB - Salvamento de Moto (Individual)</span>
+              </div>
+              <div class="course-req">
+                *Necessário cursos de BCM e TAF.
+              </div>
+            </li>
+
+            <li class="course-item">
+              <div class="course-title">
+                <span class="icon">🚁</span>
+                <span>GRPAE Farm - Farm com Helicóptero (Individual)</span>
+              </div>
+              <div class="course-req">
+                *Necessário cursos de BCM e TAF.
+              </div>
+            </li>
+
+            <li class="course-item">
+              <div class="course-title">
+                <span class="icon">🚁</span>
+                <span>GRPAE Patrulha - Salvamento com Helicóptero (Individual)</span>
+              </div>
+              <div class="course-req">
+                *Necessário cursos de BCM, TAF e GRPAE Farm.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cursos extras (especialização sem upamento) -->
+        <div class="course-block">
+          <div class="course-block-title">Cursos Extras</div>
+          <div class="course-block-sub">Especialização, sem upamento de cargo</div>
+
+          <ul class="course-list">
+            <li class="course-item">
+              <div class="course-title">
+                <span class="icon">🚒</span>
+                <span>Perito Patrulha - Perito em Patrulhamento (Individual)</span>
+              </div>
+              <div class="course-req">
+                *Necessário cursos de BCM, TAF, MOB e GRPAE.
+              </div>
+            </li>
+
+            <li class="course-item">
+              <div class="course-title">
+                <span class="icon">🪂</span>
+                <span>Paraquedismo - Salvamento com Salto de Paraquedas (Individual)</span>
+              </div>
+              <div class="course-req">
+                *Necessário cursos de BCM, TAF, MOB e GRPAE.
+              </div>
+            </li>
+
+            <li class="course-item">
+              <div class="course-title">
+                <span class="icon">⛰️</span>
+                <span>Montanha - Salvamento em Montanha (Individual)</span>
+              </div>
+              <div class="course-req">
+                *Necessário cursos de BCM, TAF, MOB e GRPAE.
+              </div>
+            </li>
+
+            <li class="course-item">
+              <div class="course-title">
+                <span class="icon">🛟</span>
+                <span>Mergulho - Salvamento em Alto Mar (Individual)</span>
+              </div>
+              <div class="course-req">
+                *Necessário cursos de BCM, TAF, MOB e GRPAE.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="courses-notes">
+        <span>📌 Cursos sujeitos à disponibilidade dos instrutores.</span>
+        <span>📌 Necessário no mínimo 24 horas de diferença para realizar novos cursos.</span>
+        <span>📌 A cada escalão superior, aumentam as responsabilidades e expectativas de liderança.</span>
+      </div>
+    </section>
+
+    <!-- OBSERVAÇÕES / ENCERRAMENTO -->
+    <section id="observacoes">
+      <div class="section-label">Encerramento</div>
+      <h2 class="section-title">Seu compromisso começa agora! 🫡</h2>
+      <p class="section-subtitle">
+        Ao ingressar no Corpo de Bombeiros da Brasil, você assume publicamente o compromisso de respeitar
+        este edital, honrar a hierarquia, proteger a cidade e agir sempre com ética, responsabilidade
+        e espírito de equipe.
+      </p>
+
+      <div class="obs-box">
+        <strong>Antes de prosseguir:</strong>
+        <ul>
+          <li>✔ Leia atentamente todo o conteúdo deste edital.</li>
+          <li>✔ Em caso de dúvidas, procure um instrutor, recrutor ou membro do comando.</li>
+          <li>✔ Lembre-se: seu comportamento reflete diretamente na imagem da corporação.</li>
+        </ul>
+        <p>
+          Ao continuar sua jornada dentro do Corpo de Bombeiros da Brasil, você declara estar ciente
+          das regras, cursos, responsabilidades e da missão que escolheu carregar.
+        </p>
+        <p><strong>👊 Sejam bem-vindos à nossa família, Bombeiro!</strong></p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span><strong>Corpo de Bombeiros Brasil RP</strong> · Edital &amp; Regulamento Interno</span>
+      <span>“Proteger a vida e o patrimônio, prevenir acidentes e servir à comunidade com coragem e dedicação.”</span>
+    </div>
+  </footer>
+
+</body>
+</html>
